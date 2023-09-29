@@ -1,13 +1,16 @@
-import subprocess
+import openai
+from django.conf import settings
 
 
-def video_to_audio(video_path, audio_path):
-    command = [
-        'ffmpeg',
-        '-i', video_path,
-        '-q:a', '0',
-        '-map', 'a',
-        audio_path
-    ]
+def transcribe_audio(audio_path):
+    openai.api_key = settings.OPENAI_API_KEY
 
-    subprocess.run(command)
+    with open(audio_path, 'rb') as audio_file:
+        response = openai.Transcription.create(
+            audio=audio_file,
+            engine='whisper',
+            language='en',
+        )
+        transcription_text = response['text']
+
+    return transcription_text
