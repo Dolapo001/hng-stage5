@@ -11,4 +11,4 @@ class VideoSerializer(serializers.ModelSerializer):
 class VideoTranscriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = VideoTranscription
-        fields = '__all__'
+        fields = ['video', 'transcription']
