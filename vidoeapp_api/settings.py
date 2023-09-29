@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y5s8jjf3$q094#e-v5amokr6(ukn-)0e20dl4!^rw85v)5auz$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,9 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'videoapp.apps.VideoappConfig',
-
-    #admin
-    'jazzmin',
 
     #api
     'rest_framework',
@@ -131,3 +128,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+OPENAI_API_KEY = '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'

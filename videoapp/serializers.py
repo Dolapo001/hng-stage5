@@ -5,7 +5,7 @@ from .models import Video, VideoTranscription
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
-        fields = ['__all__']
+        fields = ['title', 'video_file']
 
 
 class VideoTranscriptionSerializer(serializers.ModelSerializer):
