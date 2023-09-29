@@ -14,6 +14,13 @@ class VideoAdmin(admin.ModelAdmin):
 @admin.register(VideoTranscription)
 class VideoTranscriptionAdmin(admin.ModelAdmin):
     list_display = ('video_title', 'transcription', 'created_at')
-    search_fields = ('video__title', 'transc')
+    search_fields = ('video__title', 'transcription')
+    list_filter = ('created_at',)
+
+    def video_title(self, obj):
+        return obj.video.title
+    video_title.short_description = 'Video Title'
+
+
 
 
