@@ -13,6 +13,11 @@ import os.path
 from pathlib import Path
 from decouple import config
 
+
+import os
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -131,6 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 config_file = os.path.join(BASE_DIR, '.env')
-config.config.config(config_file)
+
 
 OPENAI_API_KEY = config('OPENAI_API_KEY')
