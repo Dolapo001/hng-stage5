@@ -1,7 +1,7 @@
 # Django-related
 *.pyc
 _pycache_/
-*.sqlite3
+*db.sqlite3/
 
 
 
