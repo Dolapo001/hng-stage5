@@ -9,7 +9,6 @@ certifi==2023.7.22
 charset-normalizer==3.2.0
 config==0.5.1
 Django==4.2.5
-django-jazzmin==2.6.0
 djangorestframework==3.14.0
 frozenlist==1.4.0
 idna==3.4
